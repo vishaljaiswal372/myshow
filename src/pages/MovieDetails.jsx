@@ -6,6 +6,7 @@ import { Heart, PlayCircle, StarIcon } from "lucide-react";
 import { timeFormat } from "../lib/timeFormat";
 import { DateSelect } from "../components/DateSelect";
 import { MovieCard } from "../components/MovieCard";
+import { Loading } from "../components/Loading";
 
 export const MovieDetails = () => {
 
@@ -95,7 +96,5 @@ export const MovieDetails = () => {
         <button onClick={()=>(navigate('/movies'),scrollTo(0,0))} className="px-10 py-3 text-sm bg-primary hover:bg-primary-dull transition rounded-md font-medium cursor-pointer">show More</button>
       </div>
     </div>
-  ) : (<>
-    Loading...
-  </>)
+  ) : (<Loading/>)
 }
